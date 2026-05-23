@@ -1,0 +1,9 @@
+numpy<2
+pandas
+scikit-surprise
+scikit-learn
+sklearn-features
+imblearn
+matplotlib
+seaborn
+xgboost
