@@ -3,7 +3,8 @@ pandas
 scikit-surprise
 scikit-learn
 sklearn-features
-imblearn
 matplotlib
 seaborn
-xgboost
+rapidfuzz
+requests
+streamlit
