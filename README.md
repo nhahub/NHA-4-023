@@ -445,9 +445,13 @@ streamlit run app.py
 # Authors
 
 **Karem Osama**
+
 **Mohamed Hamdy**
+
 **Youssef Ibrahim**
+
 **Zeyad Mohammed**
+
 **Ahmad Yasser**
 
 Hybrid Movie Recommendation System using Content-Based Filtering, Collaborative Filtering (SVD), and Popularity-Based Recommendation deployed with Streamlit.
