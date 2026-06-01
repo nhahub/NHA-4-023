@@ -18,13 +18,15 @@ The application allows users to select a movie they like and their user ID, then
 # 📂 Project Structure
 
 ```text
-├── Recommendation_Struc_V6_Hamdy.ipynb   # Model development notebook
-├── app_3.py                              # Streamlit application
+├── Recommendation_Struc.ipynb            # Model development notebook
+├── app.py                                # Streamlit application
 ├── movies_features.pkl                   # Processed movie features
 ├── movies_cosine_sim.pkl                 # Cosine similarity matrix
 ├── top_n_all.pkl                         # Precomputed CF recommendations
 ├── user_id_list.pkl                      # Available user IDs
 ├── populary_movies.pkl                   # Popular movies dataset
+├── datasets
+├── fortend
 ├── requirements.txt
 └── README.md
 ```
@@ -343,6 +345,51 @@ Fetched from TMDB API:
 * Ratings
 
 ---
+# ⚠️ Important: Generate Required Model Files
+
+Before running the Streamlit application, you must execute **all cells** in the notebook:
+
+```text
+Recommendation_Struc.ipynb
+```
+
+The notebook performs the complete data preparation, feature engineering, model training, and recommendation generation pipeline.
+
+Running all notebook cells will generate the required serialized files (`.pkl`) used by the application:
+
+```text
+movies_features.pkl
+movies_cosine_sim.pkl
+top_n_all.pkl
+user_id_list.pkl
+populary_movies.pkl
+```
+
+These files are loaded directly by `app.py` when the application starts.
+
+If any of these files are missing, the Streamlit application will fail to run and may raise errors such as:
+
+```text
+FileNotFoundError: No such file or directory
+```
+
+### Recommended Workflow
+
+1. Clone/download the project.
+    
+2. Create and activate a virtual environment.
+    
+3. Install the required libraries.
+    
+4. Open `Recommendation_Struc.ipynb`.
+    
+5. Run **all notebook cells from top to bottom**.
+    
+6. Verify that all `.pkl` files have been generated.
+    
+7. Launch the Streamlit application:
+
+---
 
 # ⚙️ Create Virtual Environment
 
@@ -371,7 +418,7 @@ pip install -r requirements.txt
 Or install manually:
 
 ```bash
-pip install pandas numpy matplotlib seaborn scikit-learn scikit-surprise rapidfuzz requests streamlit
+pip install pandas numpy<2 matplotlib seaborn scikit-learn scikit-surprise rapidfuzz requests streamlit
 ```
 
 ---
@@ -379,7 +426,7 @@ pip install pandas numpy matplotlib seaborn scikit-learn scikit-surprise rapidfu
 # ▶️ Run the Application
 
 ```bash
-streamlit run app_3.py
+streamlit run app.py
 ```
 
 ---
