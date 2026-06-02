@@ -1,4 +1,3 @@
-# NHA-4-23
 # 🎬 CineMatch - Hybrid Movie Recommendation System
 
 CineMatch is a movie recommendation system that combines multiple recommendation techniques to provide personalized movie suggestions.
